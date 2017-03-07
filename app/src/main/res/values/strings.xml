@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RionegroTurismo</string>
+    <string name="titulo">Rionegro</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="registrese">Regístrese</string>
+    <string name="repitpassword">Repetir contraseña</string>
+    <string name="email">Correo electrónico</string>
+    <string name="cancel">Cancelar</string>
+    <string name="register">Registro</string>
+    <string name="miperfil">Mi perfil</string>
+    <string name="cerrar">Cerrar sesión</string>
+    <string name="principal">Principal</string>
+</resources>
