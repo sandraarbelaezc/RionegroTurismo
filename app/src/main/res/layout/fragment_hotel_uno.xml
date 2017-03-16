@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rionegroturismo.HotelUnoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="@string/hotel1"
+            android:textColor="@color/antiquewhite"
+            android:textStyle="italic"
+            android:textAlignment="center"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hotel1"
+            android:id="@+id/imageView2"
+            android:layout_weight="0.30" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="¡Una opción excelente!"
+            android:textColor="@color/antiquewhite"
+            android:textAlignment="textEnd"
+            android:textStyle="italic"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="COP 265.000"
+            android:textColor="@color/antiquewhite"
+            android:textAlignment="textEnd"
+            android:textStyle="italic"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Glorieta aeropuerto Jose María Córdova"
+            android:textColor="@color/antiquewhite"
+            android:textAlignment="textEnd"
+            android:textStyle="italic"/>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

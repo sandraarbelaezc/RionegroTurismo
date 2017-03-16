@@ -5,6 +5,17 @@
         android:id="@+id/mPerfil"
         android:title="@string/miperfil"
         />
+    <item
+        android:id="@+id/mHoteles"
+        android:title="Hoteles"/>
+
+    <item
+        android:id="@+id/mBares"
+        android:title="Bares"/>
+
+    <item
+        android:id="@+id/mRestaurantes"
+        android:title="Restaurantes"/>
 
     <item
         android:id="@+id/mCerrar"

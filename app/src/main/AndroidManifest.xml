@@ -8,20 +8,43 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" >
-        </activity>
-        <activity android:name=".SplashActivity" >
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashActivity"></activity>
+        <activity android:name=".LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".RegistroActivity" >
 
         </activity>
-        <activity android:name=".RegistroActivity" />
-        <activity android:name=".PerfilActivity">
+        <activity android:name=".PerfilActivity" />
+        <activity android:name=".DemoActivity" />
+        <activity
+            android:name=".HotelesActivity"
+            android:label="@string/title_activity_hoteles"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
+
+        <activity
+            android:name=".RestaurantesActivity"
+            android:label="@string/title_activity_restaurantes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BaresActivity"
+            android:label="@string/title_activity_bares"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ListaActivity">
+
+        </activity>
+        <activity
+            android:name=".DrawerActivity"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
     </application>
 

@@ -75,6 +75,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
                 break;
+            case R.id.mHoteles:
+                intent = new Intent(MainActivity.this, HotelesActivity.class);
+                intent.putExtra("username", username);  //Le mando el nombre y el correo
+                intent.putExtra("correo", correo);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.mBares:
+                intent = new Intent(MainActivity.this, BaresActivity.class);
+                intent.putExtra("username", username);  //Le mando el nombre y el correo
+                intent.putExtra("correo", correo);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.mRestaurantes:
+                intent = new Intent(MainActivity.this, RestaurantesActivity.class);
+                intent.putExtra("username", username);  //Le mando el nombre y el correo
+                intent.putExtra("correo", correo);
+                startActivity(intent);
+                finish();
+                break;
             case R.id.mPerfil:
                 intent = new Intent(MainActivity.this, PerfilActivity.class);
                 intent.putExtra("username", username);  //Le mando el nombre y el correo
