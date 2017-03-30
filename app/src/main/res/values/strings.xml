@@ -29,11 +29,15 @@
     <string name="bar1">Café-Bar El Hato</string>
     <string name="bar2">Bar Shot House</string>
     <string name="bar3">Bar Don Gatto</string>
-    <string name="parque1">Parque1</string>
+    <string name="parque1">Parque de la libertad</string>
     <string name="descrip">Parque para visitar en familia</string>
     <string name="direccion">Cr 30 AA 45</string>
     <string name="title_activity_drawer">DrawerActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="parque2">Parque Tutucán</string>
+    <string name="parque3">Parque San Francisco</string>
+    <string name="parque4">Parque San Antonio</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

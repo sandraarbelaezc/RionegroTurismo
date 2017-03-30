@@ -46,7 +46,7 @@ public class PerfilActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.mPrincipal:
-                intent = new Intent(PerfilActivity.this, MainActivity.class);
+                intent = new Intent(PerfilActivity.this, ListaActivity.class);
                 intent.putExtra("username", username);  //Le mando el nombre y el correo
                 intent.putExtra("correo", correo);
                 startActivity(intent);

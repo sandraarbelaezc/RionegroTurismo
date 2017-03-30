@@ -4,6 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,21 +23,15 @@ import android.view.MenuItem;
 public class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    Intent intent;
+    private ViewPager mViewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -41,6 +41,70 @@ public class DrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+/*
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
+
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+
+        HotelUnoFragment fragment = new HotelUnoFragment();
+        ft.add(R.id.contenedorFragment, fragment).commit();
+
+        HotelDosFragment fragment1 = new HotelDosFragment();
+        ft.add(R.id.contenedorFragment, fragment1).commit();
+
+        HotelTresFragment fragment2 = new HotelTresFragment();
+        ft.add(R.id.contenedorFragment, fragment2).commit();*/
+        
+    }
+
+    public class SectionsPagerAdapter extends FragmentPagerAdapter { //Adaptar fragmentos a una pagina (Clase)
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) { //Coloqueme ta fragmentos---Recibe posicion y retorna fragmento
+            // getItem is called to instantiate the fragment for the given page.
+            // Return a PlaceholderFragment (defined as a static inner class below).
+            //return PlaceholderFragment.newInstance(position + 1);
+
+            switch (position) {
+                case 0:
+                    HotelUnoFragment tab1 = new HotelUnoFragment();
+                    return tab1;
+                case 1:
+                    HotelDosFragment tab2 = new HotelDosFragment();
+                    return tab2;
+                case 2:
+                    HotelTresFragment tab3 = new HotelTresFragment();
+                    return tab3;
+                default:
+                    return null;
+            }
+        }
+
+        @Override
+        public int getCount() { //Retorna la cantidad de fragmentos a utiizar
+            // Show 3 total pages.
+            return 3; //Retorna los tres fragmentos q usamos
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {    //Titulo de los fragmentos
+            switch (position) {
+                case 0:
+                    return "Santiago de Arma";
+                case 1:
+                    return "Boutique el Cortijo de la Riviera";
+                case 2:
+                    return "Bosques del Llano";
+                //return getResources().getString(R.string.hotel2);
+            }
+            return null;
+        }
     }
 
     @Override
@@ -81,21 +145,36 @@ public class DrawerActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_hotel) {
 
-            Intent intent = new Intent(DrawerActivity.this, HotelesActivity.class);
+            intent = new Intent(DrawerActivity.this, HotelesActivity.class);
             startActivity(intent);
 
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_bar) {
 
-        } else if (id == R.id.nav_slideshow) {
+            intent = new Intent(DrawerActivity.this, BaresActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_resta) {
 
-        } else if (id == R.id.nav_share) {
+            intent = new Intent(DrawerActivity.this, RestaurantesActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_parque) {
+
+            intent = new Intent(DrawerActivity.this, ListaActivity.class);
+            startActivity(intent);
+
+        } else if (id == R.id.nav_perfil) {
+
+            intent = new Intent(DrawerActivity.this, PerfilActivity.class);
+            startActivity(intent);
+
+        } else if (id == R.id.nav_salir) {
+
+            intent = new Intent(DrawerActivity.this, LoginActivity.class);
+            startActivity(intent);
 
         }
 

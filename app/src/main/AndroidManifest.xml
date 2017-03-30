@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rionegroturismo">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,17 +16,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".SplashActivity"></activity>
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".SplashActivity" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".RegistroActivity" >
 
         </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegistroActivity" />
         <activity android:name=".PerfilActivity" />
         <activity android:name=".DemoActivity" />
         <activity
@@ -28,7 +35,6 @@
             android:theme="@style/AppTheme.NoActionBar" >
 
         </activity>
-
         <activity
             android:name=".RestaurantesActivity"
             android:label="@string/title_activity_restaurantes"
@@ -37,14 +43,32 @@
             android:name=".BaresActivity"
             android:label="@string/title_activity_bares"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ListaActivity">
-
-        </activity>
+        <activity android:name=".ListaActivity"></activity>
         <activity
             android:name=".DrawerActivity"
             android:label="@string/title_activity_drawer"
             android:theme="@style/AppTheme.NoActionBar">
 
+        </activity>
+        <activity android:name=".ParqueUnoActivity" />
+        <activity android:name=".ParqueDosActivity" />
+        <activity android:name=".ParqueTresActivity" />
+        <activity android:name=".ParqueCuatroActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
         </activity>
     </application>
 

@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(eUsername.getText().toString().equals(username) &&
                         eContrasena.getText().toString().equals(password)){
 
-                    intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent = new Intent(LoginActivity.this, ListaActivity.class);
                     intent.putExtra("username", username);  //Le mando los datos de Login a MainActivity
                     intent.putExtra("correo", correo);
                     startActivity(intent); //Porque no estamos esperando respuesta
