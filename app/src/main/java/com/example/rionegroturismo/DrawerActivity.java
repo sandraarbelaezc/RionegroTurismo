@@ -41,6 +41,8 @@ public class DrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
 /*
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
@@ -59,7 +61,7 @@ public class DrawerActivity extends AppCompatActivity
         
     }
 
-    public class SectionsPagerAdapter extends FragmentPagerAdapter { //Adaptar fragmentos a una pagina (Clase)
+   /* public class SectionsPagerAdapter extends FragmentPagerAdapter { //Adaptar fragmentos a una pagina (Clase)
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -105,7 +107,7 @@ public class DrawerActivity extends AppCompatActivity
             }
             return null;
         }
-    }
+    }*/
 
     @Override
     public void onBackPressed() {

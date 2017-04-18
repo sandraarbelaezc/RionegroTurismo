@@ -2,6 +2,7 @@ package com.example.rionegroturismo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,6 +36,9 @@ public class ListaActivity extends AppCompatActivity  {
     Intent intent;
     String username, correo;
 
+    SharedPreferences prefs;
+    SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +47,9 @@ public class ListaActivity extends AppCompatActivity  {
         Bundle extras = getIntent().getExtras();    //Extrae los extras q vienen de Login
         username = extras.getString("username");
         correo = extras.getString("correo");
+
+        prefs = getSharedPreferences("MisPreferencias", MODE_PRIVATE);
+        editor = prefs.edit();
 
         list = (ListView) findViewById(R.id.List);
 
@@ -127,6 +134,8 @@ public class ListaActivity extends AppCompatActivity  {
 
         switch (id){
             case R.id.mCerrar:
+                editor.putInt("login",-1);
+                editor.commit();
                 intent = new Intent(ListaActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();

@@ -226,6 +226,9 @@ public class HotelesActivity extends AppCompatActivity
                 case 2:
                     HotelTresFragment tab3 = new HotelTresFragment();
                     return tab3;
+                case 3:
+                    MapaHFragment tab4 = new MapaHFragment();
+                    return tab4;
                 default: return null;
             }
         }
@@ -233,7 +236,7 @@ public class HotelesActivity extends AppCompatActivity
         @Override
         public int getCount() { //Retorna la cantidad de fragmentos a utiizar
             // Show 3 total pages.
-            return 3; //Retorna los tres fragmentos q usamos
+            return 4; //Retorna los tres fragmentos q usamos
         }
 
         @Override
@@ -246,6 +249,8 @@ public class HotelesActivity extends AppCompatActivity
                 case 2:
                     return "Bosques del Llano";
                     //return getResources().getString(R.string.hotel2);
+                case 3:
+                    return "Mapas";
             }
             return null;
         }

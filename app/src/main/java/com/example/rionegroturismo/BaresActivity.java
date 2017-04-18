@@ -227,6 +227,9 @@ public class BaresActivity extends AppCompatActivity
                 case 2:
                     BarTresFragment tab3 = new BarTresFragment();
                     return tab3;
+                case 3:
+                    MapaBFragment tab4 = new MapaBFragment();
+                    return tab4;
                 default: return null;
             }
         }
@@ -234,7 +237,7 @@ public class BaresActivity extends AppCompatActivity
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
 
         @Override
@@ -246,6 +249,8 @@ public class BaresActivity extends AppCompatActivity
                     return "Shot House";
                 case 2:
                     return "Don Gatto";
+                case 3:
+                    return "Mapas";
             }
             return null;
         }

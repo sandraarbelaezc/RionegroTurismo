@@ -226,6 +226,9 @@ public class RestaurantesActivity extends AppCompatActivity
                 case 2:
                     RestauranteTresFragment tab3 = new RestauranteTresFragment();
                     return tab3;
+                case 3:
+                    MapaRFragment tab4 = new MapaRFragment();
+                    return tab4;
                 default: return null;
             }
         }
@@ -233,7 +236,7 @@ public class RestaurantesActivity extends AppCompatActivity
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
 
         @Override
@@ -245,6 +248,8 @@ public class RestaurantesActivity extends AppCompatActivity
                     return "Raffaello's pizza";
                 case 2:
                     return "Di Vino";
+                case 3:
+                    return "Mapas";
             }
             return null;
         }
